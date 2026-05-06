@@ -1,0 +1,170 @@
+/* Importando uma fonte limpa e moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* --- Estilos do Perfil --- */
+.profile-section {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+}
+
+.status-dot {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    background-color: #25D366;
+    border-radius: 50%;
+    border: 3px solid #000000;
+}
+
+/* --- Estilos de Texto --- */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.highlight {
+    color: #FFB800;
+}
+
+.stats {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* --- Estilos dos Botões Base --- */
+.buttons-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    /* Transição suave para todas as mudanças (tamanho, cor e sombra) */
+    transition: all 0.3s ease; 
+}
+
+.btn i {
+    font-size: 1.2rem;
+}
+
+/* Efeito universal de Crescer ao passar o mouse */
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* --- Botão WhatsApp (Verde) --- */
+.btn-whatsapp {
+    background-color: #22c55e;
+    animation: pulso-whatsapp 2s infinite; /* Chama o pulso verde */
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ea34d; /* Escurece um pouco o verde */
+    box-shadow: 0 10px 20px rgba(34, 197, 94, 0.4); /* Sombra flutuante verde */
+}
+
+/* --- Botão Telegram (Azul) --- */
+.btn-telegram {
+    background-color: #0284c7;
+    animation: pulso-telegram 2s infinite; /* Chama o pulso azul */
+}
+
+.btn-telegram:hover {
+    background-color: #026aa0; /* Escurece um pouco o azul */
+    box-shadow: 0 10px 20px rgba(2, 132, 199, 0.4); /* Sombra flutuante azul */
+}
+
+/* --- Estilos do Rodapé --- */
+.footer-section {
+    margin-top: 10px;
+}
+
+.footer-section p {
+    font-size: 0.85rem;
+    color: #a3a3a3;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* =========================================
+   ANIMAÇÕES DE PULSO (KEYFRAMES)
+   ========================================= */
+
+/* Animação para o WhatsApp (Aura Verde) */
+@keyframes pulso-whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+/* Animação para o Telegram (Aura Azul) */
+@keyframes pulso-telegram {
+    0% {
+        box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(2, 132, 199, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(2, 132, 199, 0);
+    }
+}
